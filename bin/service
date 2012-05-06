@@ -1,0 +1,71 @@
+#!/bin/bash
+
+function start_apache {
+	echo "Starting Apache"
+	/Applications/MAMP/bin/startApache.sh
+}
+
+function stop_apache {
+	echo "Stopping Apache"
+	/Applications/MAMP/bin/stopApache.sh	
+}
+
+function restart_apache {
+	stop_apache
+	start_apache
+}
+
+
+function start_mysql {
+	echo "Starting MySQL"
+	/Applications/MAMP/bin/startMysql.sh
+}
+
+function stop_mysql {
+	echo "Stopping MySQL"
+	/Applications/MAMP/bin/stopMysql.sh	
+}
+
+function restart_mysql {
+	stop_mysql
+	start_mysql
+}
+
+
+case $2 in
+	apache)
+		case $1 in
+			start)
+				start_apache
+				;;
+			stop)
+				stop_apache
+				;;
+			restart)
+				restart_apache
+				;;
+			*)
+				echo 'Unknown operation'
+				;;
+		esac
+		;;
+	mysql)
+		case $1 in
+			start)
+				start_mysql
+				;;
+			stop)
+				stop_mysql
+				;;
+			restart)
+				restart_mysql
+				;;
+			*)
+				echo 'Unknown operation'
+				;;
+		esac
+		;;
+	*)
+		echo 'Unknown service'
+		;;
+esac
