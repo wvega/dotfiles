@@ -49,7 +49,14 @@ else
     PS_S="${YELLOW}\$"
 fi
 
-PS1="${GREEN}(${LIGHT_GRAY}\w${GREEN}) ${PS_S}${PS_CLEAR} "
+function __git_current_branch() {
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
+}
+
+PS1="[\u@\h \W]\$"
+PS1="${GREEN}(${LIGHT_GRAY}\W${GREEN}) ${PS_S}${PS_CLEAR} "
+PS1="\u@mac${LIGHT_GRAY}:${PS_CLEAR}\W${GREEN}$(__git_current_branch)${PS_S} ${PS_CLEAR}"
+PS1="\u@mac${LIGHT_GRAY}:${PS_CLEAR}\W${PS_S} ${PS_CLEAR}"
 
 unset PROMPT_COMMAND
 
