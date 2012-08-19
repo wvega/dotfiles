@@ -1,9 +1,22 @@
 # -------------------------------
 # paths
 # -------------------------------
+
 # setting PATH for Python 2.7
 #PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 
+# add git-core binaries to PATH
+PATH="/usr/local/git/libexec/git-core:$PATH"
+
+# MacPorts Installer addition on 2012-03-23_at_07:37:26: adding an appropriate PATH variable for use with MacPorts.
+PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+# setting MySQL PATH. MacPorts links ending in 5 are not easily to find (e.g. mysqldump5)
+PATH="/opt/local/lib/mysql5/bin:$PATH"
+
+# MAMP path
+#PATH="/Applications/MAMP/Library/bin/:$PATH"
 
 # add ~/bin to path
 test -d "$HOME/bin" && PATH="$HOME/bin:$PATH"
@@ -14,7 +27,7 @@ export PATH
 # -------------------------------
 # aliases
 # -------------------------------
-alias mysql=/usr/local/mysql/bin/mysql
+
 alias v="mvim"
 alias n="nano"
 alias dir=ls
@@ -24,6 +37,14 @@ alias gitc="git commit"
 alias gitp="git push"
 alias gitd="git diff"
 alias django="python manage.py"
+
+alias mysqlstart='sudo /opt/local/bin/mysqld_safe5 &'
+alias mysqlstop='/opt/local/bin/mysqladmin5 -u root -p shutdown'
+
+alias apache2ctl='sudo /opt/local/apache2/bin/apachectl'
+
+alias wradio='mplayer -loop 0 http://63.243.143.155/WRADIOAAC'
+alias radioacktiva='mplayer -loop 0 http://208.80.54.20/RADIO_ACTIVAAAC'
 
 # -------------------------------
 # prompt
