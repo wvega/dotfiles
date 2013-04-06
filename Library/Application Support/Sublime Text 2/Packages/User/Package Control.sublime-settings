@@ -1,0 +1,24 @@
+{
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"Alignment",
+		"DocBlockr",
+		"Git",
+		"HTML Compressor",
+		"Http Requester",
+		"Indent XML",
+		"JsFormat",
+		"JsMinifier",
+		"LESS",
+		"Package Control",
+		"Placeholders",
+		"Prefixr",
+		"Puppet",
+		"Sublime-HTMLPrettify",
+		"SublimeLinter",
+		"Theme - Soda",
+		"TrailingSpaces",
+		"WordHighlight"
+	]
+}

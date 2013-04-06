@@ -1,0 +1,18 @@
+<snippet>
+    <content><![CDATA[
+# coding: utf-8
+
+from __future__ import with_statement
+
+# from fabric.api import env, run, local, cd
+
+from skeleton import init
+from skeleton.httpd import vhost
+from skeleton.wordpress import config, replace
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>skeleton</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>
