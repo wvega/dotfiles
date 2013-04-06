@@ -36,6 +36,7 @@ alias gita="git add"
 alias gitc="git commit"
 alias gitp="git push"
 alias gitd="git diff"
+alias gitl="git log --graph --oneline --all"
 alias django="python manage.py"
 
 alias mysqlstart='sudo /opt/local/bin/mysqld_safe5 &'
@@ -45,6 +46,7 @@ alias apache2ctl='sudo /opt/local/apache2/bin/apachectl'
 
 alias wradio='mplayer -loop 0 http://63.243.143.155/WRADIOAAC'
 alias radioacktiva='mplayer -loop 0 http://208.80.54.20/RADIO_ACTIVAAAC'
+alias 90s='mplayer -loop 0 http://8473.live.streamtheworld.com/BIGR_90ALTROCK'
 
 # -------------------------------
 # prompt
