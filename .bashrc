@@ -30,13 +30,18 @@ export PATH
 
 alias v="mvim"
 alias n="nano"
+
 alias dir=ls
+
 alias gits="git status"
 alias gita="git add"
 alias gitc="git commit"
 alias gitp="git push"
 alias gitd="git diff"
 alias gitl="git log --graph --oneline --all"
+
+alias code="sublime *.sublime-project"
+
 alias django="python manage.py"
 
 alias mysqlstart='sudo /opt/local/bin/mysqld_safe5 &'
@@ -88,3 +93,5 @@ if [ $TERM = "dumb" ]; then
 fi
 
 export PS1
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

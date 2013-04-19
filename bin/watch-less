@@ -1,0 +1,62 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import os
+import time
+
+from argparse import ArgumentParser
+from subprocess import call
+
+
+data = {}
+
+
+def less(filename, options):
+    if options.target is not None:
+        target = options.target
+    else:
+        target = filename
+
+    cssfile = target.replace('.less', '.css')
+    source = os.path.realpath(target)
+    destination = os.path.realpath(cssfile)
+
+    if call('lessc %s %s' % (source, destination), shell=True) == 0:
+        print 'compiled %s to %s [%s]' % (target, cssfile, filename)
+        data[filename] = os.path.getmtime(target)
+
+
+def watch():
+    description = 'Watch LESS file and compile them when they change.'
+    parser = ArgumentParser(description=description)
+    parser.add_argument('-t', '--target', dest='target', metavar='FILE',
+                        help='LESS file to compile when one of the watched ' +
+                             'files change. If a target is not provided, ' +
+                             'each file will be compiled when it changes.')
+    parser.add_argument('files', nargs='*')
+    options = parser.parse_args()
+
+    if len(options.files) == 0 and options.target:
+        options.files.append(options.target)
+
+    process = len(options.files) > 0
+    while process:
+        for filename in options.files:
+            try:
+                if data[filename] == os.path.getmtime(filename):
+                    continue
+            except KeyError:
+                pass
+
+            less(filename, options)
+
+            data[filename] = os.path.getmtime(filename)
+
+        time.sleep(0.1)
+
+
+if __name__ == '__main__':
+    try:
+        watch()
+    except KeyboardInterrupt:
+        print '\r\r\r\rGoodbye!'
