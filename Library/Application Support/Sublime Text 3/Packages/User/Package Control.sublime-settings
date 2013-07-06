@@ -1,8 +1,9 @@
 {
+	"auto_upgrade_last_run": null,
 	"installed_packages":
 	[
+		"Markdown Preview",
 		"Package Control",
-		"SublimeLinter",
 		"TrailingSpaces",
 		"WordHighlight"
 	]

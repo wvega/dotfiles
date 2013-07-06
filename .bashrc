@@ -63,6 +63,9 @@ alias wradio='mplayer -loop 0 http://1351.live.streamtheworld.com/WRADIOAAC'
 alias bluradio='mplayer -loop 0 http://208.80.54.118/BLURADIO_SC'
 alias radioacktiva='mplayer -loop 0 http://208.80.54.20/RADIO_ACTIVAAAC'
 alias 90s='mplayer -loop 0 http://8473.live.streamtheworld.com/BIGR_90ALTROCK'
+alias szradio='mplayer -loop 0 http://blogcito.info:8000/airtime_128'
+alias rockcity='mplayer -loop 0 http://streaming206.radionomy.com/Rockcitymed'
+alias rtfmradio='mplayer -loop 0 http://streaming208.radionomy.com/RTFM'
 
 # -------------------------------
 # prompt
