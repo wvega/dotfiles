@@ -64,6 +64,8 @@ alias bluradio='mplayer -loop 0 http://208.80.54.118/BLURADIO_SC'
 alias radioacktiva='mplayer -loop 0 http://208.80.54.20/RADIO_ACTIVAAAC'
 alias 90s='mplayer -loop 0 http://8473.live.streamtheworld.com/BIGR_90ALTROCK'
 
+alias sublime='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+
 # -------------------------------
 # prompt
 # -------------------------------
