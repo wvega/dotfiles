@@ -1,0 +1,36 @@
+# -------------------------------
+# aliases
+# -------------------------------
+
+alias v="mvim"
+alias n="nano"
+
+alias dir=ls
+
+alias gits="git status"
+alias gita="git add"
+alias gitc="git commit"
+alias gitp="git push"
+alias gitd="git diff"
+alias gitl="git log --graph --oneline --all"
+
+alias code="sublime *.sublime-workspace"
+
+alias django="python manage.py"
+
+alias mysqlstart='sudo /opt/local/bin/mysqld_safe5 &'
+alias mysqlstop='/opt/local/bin/mysqladmin5 -u root -p shutdown'
+
+alias apache2ctl='sudo /opt/local/apache2/bin/apachectl'
+
+alias wradio='mplayer -loop 0 http://63.243.143.155/WRADIOAAC'
+alias wradio='mplayer -loop 0 http://1351.live.streamtheworld.com/WRADIOAAC'
+alias bluradio='mplayer -loop 0 http://208.80.54.118/BLURADIO_SC'
+alias radioacktiva='mplayer -loop 0 http://208.80.54.20/RADIO_ACTIVAAAC'
+alias 90s='mplayer -loop 0 http://8473.live.streamtheworld.com/BIGR_90ALTROCK'
+alias szradio='mplayer -loop 0 http://blogcito.info:8000/airtime_128'
+alias rockcity='mplayer -loop 0 http://streaming206.radionomy.com/Rockcitymed'
+alias rtfmradio='mplayer -loop 0 http://streaming208.radionomy.com/RTFM'
+
+alias showthemall='defaults write com.apple.finder AppleShowAllFiles -boolean true'
+alias hidethemall='defaults delete com.apple.finder AppleShowAllFiles'
