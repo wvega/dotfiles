@@ -1,6 +1,7 @@
 {
 	"color_scheme": "Packages/Color Scheme - Default/Twilight.tmTheme",
 	"default_line_ending": "unix",
+	"ensure_newline_at_eof_on_save": true,
 	"find_selected_text": true,
 	"font_face": "Consolas",
 	"font_options":
@@ -14,6 +15,8 @@
 		"Vintage"
 	],
 	"match_selection": true,
+	"open_files_in_new_window": false,
 	"scroll_past_end": true,
+	"theme": "Spacegray Eighties.sublime-theme",
 	"translate_tabs_to_spaces": true
 }

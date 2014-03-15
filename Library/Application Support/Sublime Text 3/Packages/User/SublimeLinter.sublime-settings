@@ -1,6 +1,14 @@
 {
+    "sublimelinter_syntax_map":
+    {
+        "Python": "python",
+        "Python Django": "python",
+        "Ruby on Rails": "ruby",
+        "C++": "c"
+    },
+
     // jshint: options for linting JavaScript. See http://www.jshint.com/options/ for more info.
-    "jshint_options": 
+    "jshint_options":
     {
         // enforcing options
         "bitwise": true,
@@ -29,4 +37,3 @@
         "jquery": true
     }
 }
-        
