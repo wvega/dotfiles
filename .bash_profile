@@ -32,12 +32,9 @@ PATH="$PATH:/usr/local/terraform"
 
 export PATH
 
-
 # -------------------------------
 # tab completions
 # -------------------------------
-
-source $HOME/.composer/vendor/wp-cli/wp-cli/utils/wp-completion.bash
 
 # Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases and ~/.functions
 # ~/.extra can be used for settings you don’t want to commit
