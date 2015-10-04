@@ -1,4 +1,3 @@
-
 set nocompatible        " fuck vi
 set autoread            " reload changed files
 set fileformats=unix,dos,mac
@@ -9,9 +8,19 @@ set nowritebackup       " (idem)
 set noswapfile
 set backupdir=~/.vim/backup
 
+set timeoutlen=200
+
 " visual stuff
 syntax on                       " syntax hl
+
 set number                      " line numbers
+set relativenumber
+
+au FocusLost * :set number
+au FocusGained * :set relativenumber
+au InsertEnter * :set number
+au InsertLeave * :set relativenumber
+
 set showmatch                   " show matching brackets
 set ruler                       " show cursor position
 set wildmenu                    " use wild menu for tab-completion

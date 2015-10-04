@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/Users/wvega/Projects/projects-extracted/mine/dnoteptb-tipfy/apps'
 let g:netrw_dirhist_2='/Users/wvega/Projects/imgshr/imgshr'
 let g:netrw_dirhist_3='/Users/wvega/Projects/personal/vagrant-wordpress/.git'
+let g:netrw_dirhist_4='/Users/wvega/Projects/VVV/www/nv-eventbrite-events'
+let g:netrw_dirhist_5='/Users/wvega/Projects/VVV/www/nv-eventbrite-events/support-files'
