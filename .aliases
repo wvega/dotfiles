@@ -5,7 +5,7 @@
 alias v="mvim"
 alias n="nano"
 
-alias dir=ls
+alias mplayer='/Applications/MPlayerX.app/Contents/Resources/MPlayerX.mplayer.bundle/Contents/Resources/x86_64/mplayer'
 
 alias gits="git status"
 alias gita="git add"
