@@ -54,6 +54,8 @@ fi
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+export NVM_DIR="/Users/wvega/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Prefer US English and use UTF-8
 export LC_CTYPE="en_US.UTF-8"
