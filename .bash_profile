@@ -25,6 +25,10 @@ PATH=$PATH:$HOME/.rvm/bin
 PATH="$HOME/.composer/vendor/bin:$PATH"
 # Add ~/bin to path
 test -d "$HOME/bin" && PATH="$HOME/bin:$PATH"
+### Added by the Heroku Toolbelt
+PATH="/usr/local/heroku/bin:$PATH"
+### Add Terraform to path
+PATH="$PATH:/usr/local/terraform"
 
 export PATH
 
