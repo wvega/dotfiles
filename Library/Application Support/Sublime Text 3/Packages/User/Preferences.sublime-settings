@@ -1,22 +1,28 @@
 {
-	"color_scheme": "Packages/Color Scheme - Default/Twilight.tmTheme",
+	"atomic_save": false,
+	"close_windows_when_empty": false,
+	"color_scheme": "Packages/User/SublimeLinter/Flat (SL).tmTheme",
 	"default_line_ending": "unix",
 	"ensure_newline_at_eof_on_save": true,
 	"find_selected_text": true,
-	"font_face": "Consolas",
+	"font_face": "Hack",
 	"font_options":
 	[
 		"no_round"
 	],
-	"font_size": 12.0,
+	"font_size": 11.0,
 	"highlight_line": true,
+	"hot_exit": true,
 	"ignored_packages":
 	[
+		"HTML-CSS-JS Prettify",
 		"Vintage"
 	],
 	"match_selection": true,
 	"open_files_in_new_window": false,
+	"remember_full_screen": true,
 	"scroll_past_end": true,
-	"theme": "Spacegray Eighties.sublime-theme",
+	"tabs_small": true,
+	"theme": "Spacegray Light.sublime-theme",
 	"translate_tabs_to_spaces": true
 }

@@ -1,11 +1,8 @@
 {
-    "api_root_url": "http://sublimall.org",
-    "api_upload_url": "/api/upload/",
-    "api_retrieve_url": "/api/retrieve/",
     "email": "wvega@wvega.com",
     "api_key": "033280bc5100ca9be004734eb9ba7de6393543e3",
     "exclude_from_package_control": false,
     "encrypt": true,
     "http_upload_timeout": 60,
-    "7za_path": "/opt/local/bin/7z"
+    "7za_path": "/usr/local/bin/7z"
 }
