@@ -21,8 +21,9 @@ PATH="/usr/local/packer:$PATH"
 PATH="/usr/local/phantomjs/bin:$PATH"
 # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/.rvm/bin
-
-# add ~/bin to path
+# Add Composer vendors to PATH
+PATH="$HOME/.composer/vendor/bin:$PATH"
+# Add ~/bin to path
 test -d "$HOME/bin" && PATH="$HOME/bin:$PATH"
 
 export PATH
