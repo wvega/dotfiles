@@ -15,8 +15,6 @@ PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 # setting MySQL PATH. MacPorts links ending in 5 are not easily to find (e.g. mysqldump5)
 PATH="/opt/local/lib/mysql5/bin:$PATH"
-# WP-Cli path
-PATH="$HOME/.composer/bin:$PATH"
 # Add Packer to the PATH
 PATH="/usr/local/packer:$PATH"
 # Add PhantomJS to PATH
