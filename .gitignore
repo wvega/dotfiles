@@ -3,6 +3,7 @@
 
 # except
 !.gitignore
+!.gitconfig
 !.bash_profile
 !.bashrc
 !.mplayer
