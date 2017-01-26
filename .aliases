@@ -15,7 +15,8 @@ alias gitd="git diff"
 alias gitl="git log --graph --oneline --all"
 
 alias sublime='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-alias code="sublime *.sublime-workspace"
+alias code="sublime --project=*.sublime-project"
+alias code="sublime *.sublime-project"
 
 alias django="python manage.py"
 
