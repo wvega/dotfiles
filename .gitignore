@@ -30,8 +30,10 @@ Library/Application Support/Sublime Text 3/Packages/*
 
 Library/Application Support/Sublime Text 3/Packages/User/Package Control.last-run
 Library/Application Support/Sublime Text 3/Packages/User/Package Control.ca-bundle
+Library/Application Support/Sublime Text 3/Packages/User/Package Control.merged-ca-bundle
 Library/Application Support/Sublime Text 3/Packages/User/Package Control.ca-list
 Library/Application Support/Sublime Text 3/Packages/User/Package Control.cache
+Library/Application Support/Sublime Text 3/Packages/User/oscrypto-ca-bundle.crt
 
 
 # however, if you find any of this, ignore them too
