@@ -1,0 +1,15 @@
+#!/bin/bash
+
+USERNAME=user@example.com
+PASSWORD=password
+WIFI_CHANNEL=${1-6}
+
+curl -d user_name=$USERNAME -d user_pass=$PASSWORD --cookie-jar /tmp/wifi-set-channel.cookies --user-agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36" -D - http://micuenta.une.com.co/login 
+
+curl --cookie /tmp/wifi-set-channel.cookies --cookie-jar /tmp/change-wifi-channel.cookies --user-agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36" -D - http://micuenta.une.com.co/centro_servicios?x_clear_stack_and_refresh=true
+
+curl --cookie /tmp/wifi-set-channel.cookies --cookie-jar /tmp/change-wifi-channel.cookies --user-agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36" -D - http://micuenta.une.com.co/producto/211507610/556/0?x_push_page=true&x_page_title=Internet 
+
+curl --cookie /tmp/wifi-set-channel.cookies --cookie-jar /tmp/change-wifi-channel.cookies --user-agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36" -D - http://micuenta.une.com.co/get_wifi_action?action=%23change_wifi_channel
+
+curl -d canalWifi=$WIFI_CHANNEL -d wifi_action=%23change_wifi_channel --cookie /tmp/wifi-set-channel.cookies --cookie-jar /tmp/change-wifi-channel.cookies --user-agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36" -D - http://micuenta.une.com.co/save_wifi_action/211507610/556/0
