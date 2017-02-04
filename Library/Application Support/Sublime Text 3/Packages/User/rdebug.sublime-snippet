@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+if ( \$_SERVER['REMOTE_ADDR'] == '${1:IP ADDRESS}' || \$_SERVER['HTTP_CF_CONNECTING_IP'] == '${1:IP ADDRESS}' || strpos( \$_SERVER['HTTP_X_FORWARDED_FOR'], '${1:IP ADDRESS}' ) !== false ) {
+    debugp( ${2:'It works'} );
+}
+]]></content>
+    <tabTrigger>rdebug</tabTrigger>
+    <scope>source.php</scope>
+</snippet>

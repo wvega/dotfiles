@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[
+echo '<pre><code>' . print_r( array( ${1:''} ), true ) . '</code></pre>';
+]]></content>
+    <tabTrigger>rprintr</tabTrigger>
+    <scope>source.php</scope>
+</snippet>
