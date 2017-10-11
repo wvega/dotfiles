@@ -34,3 +34,4 @@ Library/Application Support/Sublime Text 3/Packages/User/*
 # however, if you find any of this, ignore them too
 .DS_Store
 .vim/.netrwhist
+.vim/bundle
