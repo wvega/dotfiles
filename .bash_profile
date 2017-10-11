@@ -19,8 +19,6 @@ PATH="/opt/local/lib/mysql5/bin:$PATH"
 PATH="/usr/local/packer:$PATH"
 # Add PhantomJS to PATH
 PATH="/usr/local/phantomjs/bin:$PATH"
-# Add RVM to PATH for scripting
-PATH=$PATH:$HOME/.rvm/bin
 # Add Composer vendors to PATH
 PATH="$HOME/.composer/vendor/bin:$PATH"
 # Add ~/bin to path
@@ -51,9 +49,6 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     source /usr/local/bin/virtualenvwrapper.sh
 fi
 
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
 export NVM_DIR="/Users/wvega/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
@@ -61,3 +56,5 @@ export NVM_DIR="/Users/wvega/.nvm"
 export LC_CTYPE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
