@@ -1,18 +1,19 @@
 {
 	"atomic_save": false,
 	"close_windows_when_empty": false,
-	"color_scheme": "Packages/User/SublimeLinter/Tomorrow (SL).tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/base16-ocean.dark (SL).tmTheme",
 	"color_scheme_dark": "Packages/User/SublimeLinter/base16-ocean.dark (SL).tmTheme",
 	"color_scheme_light": "Packages/User/SublimeLinter/Tomorrow (SL).tmTheme",
 	"default_line_ending": "unix",
 	"ensure_newline_at_eof_on_save": true,
 	"find_selected_text": true,
-	"font_face": "Hack",
+	"font_face": "SF Mono",
+	"font_face_menlo": "Menlo",
 	"font_options":
 	[
 		"no_round"
 	],
-	"font_size": 11.0,
+	"font_size": 11,
 	"highlight_line": true,
 	"hot_exit": true,
 	"ignored_packages":
@@ -20,14 +21,20 @@
 		"HTML-CSS-JS Prettify",
 		"Vintage"
 	],
+	"match_brackets": false,
+	"match_brackets_angle": false,
+	"match_brackets_braces": false,
+	"match_brackets_content": false,
+	"match_brackets_square": false,
 	"match_selection": true,
+	"match_tags": false,
 	"open_files_in_new_window": false,
 	"remember_full_screen": true,
 	"scroll_past_end": true,
 	"show_encoding": true,
 	"spacegray_fileicons": true,
 	"tabs_small": true,
-	"theme": "Spacegray Light.sublime-theme",
+	"theme": "Spacegray.sublime-theme",
 	"theme_dark": "Spacegray.sublime-theme",
 	"theme_light": "Spacegray Light.sublime-theme",
 	"translate_tabs_to_spaces": true
