@@ -13,6 +13,8 @@
 !.vim
 !.vimrc
 !.terminal
+!.zshrc
+!.oh-my-custom-zsh
 
 !bin/
 !Library/
