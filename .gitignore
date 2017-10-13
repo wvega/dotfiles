@@ -9,6 +9,7 @@
 !.bashrc
 !.mplayer
 !.nanorc
+!.ssh
 !.vim
 !.vimrc
 !.terminal
@@ -30,6 +31,9 @@ Library/Application Support/Sublime Text 3/Packages/*
 
 Library/Application Support/Sublime Text 3/Packages/User/*
 !Library/Application Support/Sublime Text 3/Packages/User/*.sublime-settings
+
+.ssh/*
+!.ssh/config
 
 # however, if you find any of this, ignore them too
 .DS_Store
