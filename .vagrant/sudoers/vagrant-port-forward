@@ -1,0 +1,3 @@
+Cmnd_Alias VAGRANT_PORT_FORWARD_ADD = /sbin/pfctl -ef -
+Cmnd_Alias VAGRANT_PORT_FORWARD_REMOVE = /sbin/pfctl -F all -f *
+%admin ALL=(root) NOPASSWD: VAGRANT_PORT_FORWARD_ADD, VAGRANT_PORT_FORWARD_REMOVE
