@@ -126,6 +126,9 @@ let g:vdebug_options['server'] = ""
 
 let g:ctrlsf_ackprg = '/usr/local/bin/rg'
 
+let g:bookmark_manage_per_buffer = 1
+let g:bookmark_save_per_working_dir = 1
+
 " colorscheme molokai
 " colorscheme one
 colorscheme PaperColor
