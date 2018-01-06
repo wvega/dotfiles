@@ -34,6 +34,12 @@
     spull = svn rebase
     spush = svn dcommit
     alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+    ignore = update-index --assume-unchanged
+    unignore = update-index --no-assume-unchanged
+    ignored = !git ls-files -v | grep "^[[:lower:]]"
+    skip = update-index --skip-worktree
+    unskip = update-index --no-skip-worktree
+    skipped = !git ls-files -v | grep "^S"
 [merge]
 	tool = opendiff
 [diff]
