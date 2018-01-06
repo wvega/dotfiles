@@ -124,6 +124,8 @@ let g:vdebug_options['server'] = ""
 " let g:UltiSnipsJumpForwardTrigger="<c-b>"
 " let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+let g:ctrlsf_ackprg = '/usr/local/bin/rg'
+
 " colorscheme molokai
 " colorscheme one
 colorscheme PaperColor
