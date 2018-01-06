@@ -5,6 +5,7 @@
 	autocrlf = input
 	excludesfile = ~/.gitignore.global
 	filemode = true
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [alias]
     ch = log --first-parent --pretty=format:'- %s'
     co = checkout
@@ -35,3 +36,25 @@
     alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
 [merge]
 	tool = opendiff
+[diff]
+	compactionHeuristic = true
+[diff-so-fancy]
+	markEmptyLines = true
+	changeHunkIndicators = true
+	stripLeadingSymbols = true
+[interactive]
+	diffFilter = diff-so-fancy | less --tabs=4 -RFX
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 124
+	newNormal = green bold
+    newHighlight = "green bold #0b670c"
+[color "diff"]
+	meta = 227
+	frag = magenta bold
+	commit = 227 bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
