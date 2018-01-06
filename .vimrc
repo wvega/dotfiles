@@ -23,6 +23,7 @@ call vundle#begin()
     Plugin 'MattesGroeger/vim-bookmarks'
     Plugin 'tpope/vim-fugitive'
     Plugin 'airblade/vim-gitgutter'
+    " Plugin 'groenewege/vim-less'
     " Plugin 'ludovicchabant/vim-gutentags'
     Plugin 'pbrisbin/vim-mkdir'
     Plugin 'rakr/vim-one'
