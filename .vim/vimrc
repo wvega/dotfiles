@@ -1,72 +1,135 @@
-set nocompatible        " fuck vi
-set autoread            " reload changed files
-set fileformats=unix,dos,mac
-set modeline
+set nocompatible
 
-set nobackup            " backup is for pussies
-set nowritebackup       " (idem)
-set noswapfile
-set backupdir=~/.vim/backup
+filetype off
 
-set timeoutlen=200
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
 
-" visual stuff
-syntax on                       " syntax hl
+call vundle#begin()
+    Plugin      'VundleVim/Vundle.vim'
+    Plugin   'chriskempson/base16-vim'
+    Plugin       'ctrlpvim/ctrlp.vim'
+    Plugin      'tacahiroy/ctrlp-funky'
+    Plugin           'dyng/ctrlsf.vim'
+    Plugin   'editorconfig/editorconfig-vim'
+    Plugin       'Yggdroot/indentLine'
+    Plugin                'matchit.zip'
+    Plugin      'NLKNguyen/papercolor-theme'
+    Plugin   'StanAngeloff/php.vim'
+    Plugin          'dim13/smyck.vim'
+    Plugin       'ervandew/supertab'
+    Plugin  'vim-syntastic/syntastic'
+    Plugin         'tomtom/tcomment_vim'
+    Plugin         'SirVer/ultisnips'
+    Plugin         'joonty/vdebug'
+    Plugin          'tpope/vim-fugitive'            " Git wrapper for Vim.
+    Plugin       'airblade/vim-gitgutter'
+    Plugin       'pangloss/vim-javascript'
+    Plugin            'mxw/vim-jsx'
+    Plugin       'pbrisbin/vim-mkdir'
+    Plugin        'jremmen/vim-ripgrep'
 
-set number                      " line numbers
+    " Plugin       'ntpeters/vim-better-whitespace' " Causes all trailing  whitespace characters to be highlighted.
+                                                    " Slows down Vim significantly probably related to https://github.com/vim/vim/issues/2584
+
+    " Plugin     'shawncplus/phpcomplete.vim'
+    " Plugin       'junegunn/seoul256.vim'
+    " Plugin     'nightsense/snow'
+    " Plugin    'vim-airline/vim-airline'
+    " Plugin    'vim-airline/vim-airline-themes'
+    " Plugin          'tpope/vim-rhubarb' " GitHub extensions for fugitive.vim.
+    " Plugin 'ludovicchabant/vim-gutentags'
+    " Plugin           'elzr/vim-json'
+    " Plugin     'groenewege/vim-less'
+    " Plugin           'rakr/vim-one'
+    " Plugin          'mhinz/vim-signify'
+    " Plugin  'HenryNewcomer/vim-theme-papaya'
+call vundle#end()
+
+filetype plugin indent on
+
+let mapleader=","
+
+source ~/.vim/airline.vim
+source ~/.vim/ctrlp.vim
+source ~/.vim/editorconfig.vim
+source ~/.vim/grep.vim
+source ~/.vim/indentLine.vim
+source ~/.vim/netrw.vim
+source ~/.vim/vdebug.vim
+source ~/.vim/UltiSnips.vim
+source ~/.vim/syntastic.vim
+
+source ~/.vim/map.vim
+source ~/.vim/colors.vim
+source ~/.vim/statusline.vim
+
+" Add GitHub quotation marks to current line and all line below.
+let @q='GI>'
+
+set clipboard=unnamed                   " Allow yy, D, and P to work with the clipboard
+
+set updatetime=100
+set timeoutlen=500
+
+set number
 set relativenumber
-
-au FocusLost * :set number
-au FocusGained * :set relativenumber
-au InsertEnter * :set number
-au InsertLeave * :set relativenumber
-
-set showmatch                   " show matching brackets
-set ruler                       " show cursor position
-set wildmenu                    " use wild menu for tab-completion
-
-set backspace=indent,eol,start  " backspacing over everything
-set whichwrap+=<,>,[,]          " cursor keys move to prev/next lines too
-
-set shortmess=aAI               " use all the abbreviations, hide intro msg, etc.
-set report=0
-set nostartofline               " don't move the cursor to the start of lines
-set incsearch                   " incremental search
-set nohlsearch                  " don't highlight matches
-
-set ignorecase                  " ignore case when searching
-set smartcase                   " don't ignore case when pattern is not lowercase
-                                " show trailing whitespace
-set list listchars=tab:»·,trail:·
-
-set title                       " set filename as terminal title
-set titleold=
-
-" formatting
-set autoindent                  " automatic indentation
-set smartindent
-set nowrap                      " don't wrap lines
+" set cursorline                " Disabled because https://github.com/vim/vim/issues/2584
 set tabstop=4
 set softtabstop=4
-set expandtab                   " expand tabs to spaces
-set shiftwidth=4                " autoindent step
-set formatoptions+=n            " recognize numbered lists
+set shiftwidth=4
+set expandtab
+set autoindent                  " Don't use smartindent unless absolutely necessary:
+                                " https://stackoverflow.com/questions/234564/tab-key-4-spaces-and-auto-indent-after-curly-braces-in-vim
+set hlsearch
+set incsearch
+set ignorecase                  " ignore case when searching
+set smartcase                   " don't ignore case when pattern is not lowercase
 
-"set enc=utf-8
-"set fenc=utf-8
+set showtabline=1               " Show tabline if there are two or more tabs only
+set laststatus=2                " Always show the status line
+set noshowmode
+
+" Always show 3 lines of context around the cursor.
+set scrolloff=3
+
+" Complete till longest comment string, or complete the first match and show
+" list of all matches
+set wildmenu
+set wildmode=longest:full,list:full
+
+" Disable swapfiles
+set noswapfile
+
+set showmatch                   " show matching brackets
+set belloff+=showmatch          " Disablee beep when there is not matching brackets (after typing => for example)
+set whichwrap+=<,>,[,]          " cursor keys move to prev/next lines too
+set shortmess=aAI               " use all the abbreviations, hide intro msg, etc.
+set report=0
+
+set nostartofline               " don't move the cursor to the start of lines
+set splitbelow
+set splitright
+
+set list listchars=tab:»·,trail:·   " show trailing whitespace
+" set colorcolumn=80,100,120          " Highlight column 81 to help with text alignment
+
+set formatoptions+=n                " recognize numbered lists
 "
+augroup wvega
+    au!
 
-" file-type specific config.
-au BufRead,BufNewFile *.module setf php     " drupal modules
-au BufRead,BufNewFile *.install setf php    " drupal modules
+    " " Toggle relative numbers on insert mode and when a window gains focus.
+    " au FocusLost,InsertEnter * :set norelativenumber
+    " au FocusGained,InsertLeave * :set relativenumber
 
-" gvim config.
-if has("gui_running")
-"    set guifont=Monaco:h12
-    set guifont=Consolas:h13
-    set guioptions-=T
-    set lines=40
-    set columns=100
-    set mousemodel=popup
-    colorscheme molokai
-endif
+    " Refresh .vimrc when saving the file
+    au BufWritePost vimrc so %
+    au BufWritePost gvimrc so %
+
+    " " Disable trim trailing whitespace for .diff files
+    " au BufEnter *.diff let g:EditorConfig_disable_rules = ['trim_trailing_whitespace']
+    " au BufLeave *.diff let g:EditorConfig_disable_rules = []
+augroup END
+
+call TurnLightsOff()
