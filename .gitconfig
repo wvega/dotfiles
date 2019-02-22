@@ -14,8 +14,7 @@
     ch = log --first-parent --pretty=format:'- %s'
     co = checkout
     goback = reset HEAD~1
-    merge-point = "!f() { git log --merges --oneline --color=always $1..$2 | tail -1; }; f"
-    merged-with = "!f() { git log --merges --oneline --color=always --ancestry-path $1..$2 | tail -1; }; f"
+    merge-commit = "!f() { if [[ $(git log --oneline --ancestry-path --first-parent $1..$2 | head -c1 | wc -c) -ne 0 ]]; then echo \"$1 was not merged. The commit is a first-parent ancestor of ${2-HEAD}.\"; elif [[ $(git log --oneline --ancestry-path $1..$2 | head -c1 | wc -c) -ne 0 ]]; then echo $(git log --merges --oneline --color=always --ancestry-path $1..$2); else echo \"$1 is not an ancestor of ${2-HEAD}.\"; fi }; f"
     mf = diff --name-only
     show-merge-base = "!f() { git show $(git merge-base $1 $2); }; f"
     st = status
