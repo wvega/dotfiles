@@ -5,7 +5,11 @@
 	autocrlf = input
 	excludesfile = ~/.gitignore.global
 	filemode = true
-	pager = diff-so-fancy | less --tabs=4 -RFX
+    pager = diff-so-fancy | less --tabs=4 -RFX
+[interactive]
+    # diffFilter = diff-so-fancy | less --tabs=4 -RFX
+    # # Replace tab characters with blanks setting tab stops four columns apart.
+    # diffFilter = expand -t4
 [alias]
     ch = log --first-parent --pretty=format:'- %s'
     co = checkout
@@ -48,8 +52,6 @@
 	markEmptyLines = true
 	changeHunkIndicators = true
 	stripLeadingSymbols = true
-[interactive]
-	diffFilter = diff-so-fancy | less --tabs=4 -RFX
 [color]
 	ui = true
 [color "diff-highlight"]
