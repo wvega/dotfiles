@@ -44,6 +44,10 @@ ZSH_THEME="robbyrussell"
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
 
+# Prevent calling composer global config bin-dir --absolute on every request
+# Only works on the composer-global-bin-dir branch of my copy of Oh-My-Zsh
+export COMPOSER_GLOBAL_BIN_DIR=$HOME/.composer/vendor/bin
+
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=~/.oh-my-custom-zsh
 
