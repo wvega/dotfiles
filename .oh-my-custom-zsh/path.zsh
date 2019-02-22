@@ -2,7 +2,7 @@
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 # Python
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export PATH="/Users/wvega/Library/Python/3.7/bin:/usr/local/opt/python/libexec/bin:$PATH"
 
 # Go development
 export GOPATH="${HOME}/.go"
