@@ -6,7 +6,7 @@ alias zshalias="vim $ZSH_CUSTOM/alias.zsh && source $ZSH_CUSTOM/alias.zsh"
 
 # Create symbolic links to relative files or directories using their absolute paths.
 symlink() {
-    ln -s $(realpath $1) $2
+    ln -s "$(realpath $1)" "$2"
 }
 
 linkmacvim() {
