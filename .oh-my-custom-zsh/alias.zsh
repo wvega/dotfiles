@@ -9,6 +9,11 @@ symlink() {
     ln -s "$(realpath $1)" "$2"
 }
 
+# Execute binaries from Composer's vendor directory.
+function vendor() {
+    vendor/bin/$1 "${@:2}"
+}
+
 linkmacvim() {
     ln -fs $(brew --cellar)/macvim/$(ls -1 $(brew --cellar)/macvim | tail -1)/MacVim.app /Applications
 }
