@@ -75,6 +75,7 @@ let @q='GI>'
 
 set clipboard=unnamed                   " Allow yy, D, and P to work with the clipboard
 
+set maxmempattern=10000
 set updatetime=100
 set timeoutlen=500
 
