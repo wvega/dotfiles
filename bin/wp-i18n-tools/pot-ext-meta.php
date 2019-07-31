@@ -3,7 +3,7 @@
  * Console application, which adds metadata strings from
  * a WordPress extension to a POT file
  *
- * @version $Id$
+ * @version $Id: pot-ext-meta.php 24564 2015-02-01 20:44:06Z ocean90 $
  * @package wordpress-i18n
  * @subpackage tools
  */
@@ -32,17 +32,19 @@ class PotExtMeta {
 	}
 
 	function load_from_file($ext_filename) {
-		$source = MakePOT::get_first_lines($ext_filename);
+		$makepot = new MakePOT;
+		$source = $makepot->get_first_lines($ext_filename);
 		$pot = '';
+		$po = new PO;
 		foreach($this->headers as $header) {
-			$string = MakePOT::get_addon_header($header, $source);
+			$string = $makepot->get_addon_header($header, $source);
 			if (!$string) continue;
 			$args = array(
 				'singular' => $string,
 				'extracted_comments' => $header.' of the plugin/theme',
 			);
 			$entry = new Translation_Entry($args);
-			$pot .= "\n".PO::export_entry($entry)."\n";
+			$pot .= "\n".$po->export_entry($entry)."\n";
 		}
 		return $pot;
 	}
@@ -51,7 +53,7 @@ class PotExtMeta {
 		if ( $headers )
 			$this->headers = (array) $headers;
 		if ( is_dir( $ext_filename ) ) {
-			$pot = implode('', array_map(array(&$this, 'load_from_file'), glob("$ext_filename/*.php")));
+			$pot = implode('', array_map(array($this, 'load_from_file'), glob("$ext_filename/*.php")));
 		} else {
 			$pot = $this->load_from_file($ext_filename);
 		}
@@ -72,5 +74,3 @@ if ($included_files[0] == __FILE__) {
 	}
 	$potextmeta->append( $argv[1], isset( $argv[2] ) ? $argv[2] : '-', isset( $argv[3] ) ? $argv[3] : null );
 }
-
-?>
